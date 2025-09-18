@@ -1,0 +1,11 @@
+*.jsonl
+*.log
+*.ipynb
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+env/
+.venv/
+
+tvs/*
