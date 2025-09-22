@@ -6,21 +6,21 @@
 
 ### Bridging Complex Thoughts and Comprehensible Speech
 
-[Sang Hoon Woo*](), [Sehun Lee*](https://yhytoto12.github.io), [Kang-wook Kim](), [Gunhee Kim](https://vision.snu.ac.kr/gunhee)
+[Sang Hoon Woo*](https://scholar.google.com/citations?user=kt3_CnoAAAAJ&hl=en), [Sehun Lee*](https://yhytoto12.github.io), [Kang-wook Kim](https://kwkim.me/), [Gunhee Kim](https://vision.snu.ac.kr/gunhee)
 
 </div>
 
 <div align="center">
 
-[[ 🌐 Project Page ](https://yhytoto12.github.io/TVS-ReVerT)] [[ 📄 Paper ]()] [[ 🤗 Datasets ](#-datasets)] [[ 🤖️ Models ](#️-scripts)]
+[ [🌐 Project Page](https://yhytoto12.github.io/TVS-ReVerT) ] [ [📄 Paper](https://arxiv.org/abs/2509.16028) ] [ [🤗 Datasets](#-datasets) ] [ [🤖️ Models](#️-scripts) ]
 
 </div>
 
 ## 💥 News
 
-- `2025.09.19` 🚀 We released our paper on [arXiv]().
+- `2025.09.22` 🚀 We released our paper on [arXiv](https://arxiv.org/abs/2509.16028).
 - `2025.09.19` 🔥 We released the training code, datasets, models, and interactive demo.
-- `2025.09.18` 🎉 Our paper got accepted to **EMNLP 2025**!
+- `2025.08.21` 🎉 Our paper got accepted to **EMNLP 2025**!
 
 ## 👀 Introduction
 
@@ -92,8 +92,8 @@ We provide scripts for training the models, including one baseline (SFF) and two
     ```
 
     You can find the trained ReVerT models on Hugging Face:
-    - [🤗 Qwen2.5-3B ](https://huggingface.co/yhytoto12/revert-Qwen2.5-3B)
-    - [🤗 Qwen2.5-0.5B ](https://huggingface.co/yhytoto12/revert-Qwen2.5-0.5B)
+    - [🤗 **Qwen2.5-3B** ](https://huggingface.co/yhytoto12/revert-Qwen2.5-3B)
+    - [🤗 **Qwen2.5-0.5B** ](https://huggingface.co/yhytoto12/revert-Qwen2.5-0.5B)
 
 ## 🖊️ Citation
 If you find our project useful for your research and applications, please kindly cite using this BibTeX:
