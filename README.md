@@ -32,13 +32,13 @@ Recent spoken dialogue systems leverage large language models (LLMs) for advance
 
 ## 🛠️ Installation
 - Python >= 3.10
-- PyTorch >= 2.5.1
+- PyTorch >= 2.6
 ```bash
 git clone https://github.com/yhytoto12/TVS-ReVerT.git
 cd TVS-ReVerT
 conda create -n tvs python=3.10
 conda activate tvs
-pip install -r requirements.txt
+pip install --extra-index-url https://download.pytorch.org/whl/cu124 torch==2.6 transformers vllm==0.8.5 openai
 
 # Use flash attention for faster training and inference (optional)
 pip install -U flash-attn --no-build-isolation
@@ -52,15 +52,15 @@ You can try our interactive demo by running one of the following commands:
 
 * Using OpenAI models as the Think model:
 ```bash
-python demo.py --think_model <openai_model_name> --verbalize_model yhytoto12/revert-Qwen2.5-3B --use_openai_think
+python demo.py --think_model <openai_model_name> --verbalizer_model yhytoto12/revert-Qwen2.5-3B --use_openai_think
 ```
 
 * Using local models as the Think model:
 ```bash
 # vLLM backend
-python -m vllm.entrypoints.transformers --model Qwen/Qwen2.5-7B-Instruct --host 0.0.0.0 --port 8000
+python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-7B-Instruct --host 0.0.0.0 --port 8000 --gpu_memory_utilization 0.5
 # Run the demo in a separate terminal
-python demo.py --think_model Qwen/Qwen2.5-7B-Instruct --verbalize_model yhytoto12/revert-Qwen2.5-3B --vllm_url http://localhost:8000/v1
+python demo.py --think_model Qwen/Qwen2.5-7B-Instruct --verbalizer_model yhytoto12/revert-Qwen2.5-3B --vllm_url http://localhost:8000/v1
 ```
 
 ## 🚀 Training

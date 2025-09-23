@@ -80,7 +80,7 @@ class VerbalizerClient:
     """Client class for handling streaming output from verbalizer model"""
 
     def __init__(self, model_name_or_path: str):
-        self.tokenizer, self.model = load_model_vllm(model_name_or_path, utilization=0.5)
+        self.tokenizer, self.model = load_model_vllm(model_name_or_path, utilization=0.45)
 
         # Special tokens
         self.BOV_TOKEN_ID = self.tokenizer.convert_tokens_to_ids(BOV_TOKEN)
@@ -92,7 +92,7 @@ class VerbalizerClient:
             max_tokens=1,
             skip_special_tokens=False,
             temperature=0.0,
-            logits_processors=[AllowedTokensLogitsProcessor([self.BOV_TOKEN_ID, self.CON_TOKEN_ID])],
+            allowed_token_ids=[self.BOV_TOKEN_ID, self.CON_TOKEN_ID],
         )
 
         self.sampling_params_for_eov = SamplingParams(
